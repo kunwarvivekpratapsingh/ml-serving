@@ -1,0 +1,29 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - "alerts.yml"
+
+scrape_configs:
+  - job_name: "model-a"
+    static_configs:
+      - targets: ["model-a:8001"]
+        labels:
+          model: "iris_classifier"
+
+  - job_name: "model-b"
+    static_configs:
+      - targets: ["model-b:8002"]
+        labels:
+          model: "house_price"
+
+  - job_name: "model-c"
+    static_configs:
+      - targets: ["model-c:8003"]
+        labels:
+          model: "sentiment"
+
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["cadvisor:8080"]
