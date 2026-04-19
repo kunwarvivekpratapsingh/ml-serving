@@ -205,3 +205,6 @@ ml-serving-project/
             ├── dashboards.yml
             └── ml-serving.json  # Pre-built dashboard
 ```
+http://54.146.144.193/model-b/predict
+http://54.146.144.193:3000/d/ml-serving-dashboard/ml-model-serving-dashboard?orgId=1
+http://54.146.144.193:9090/graph?g0.expr=&g0.tab=1&g0.display_mode=lines&g0.show_exemplars=0&g0.range_input=1h
